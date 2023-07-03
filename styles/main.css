@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+body {
+  margin: 1.5em;
+  line-height: 1;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: "Poppins", sans-serif;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+button,
+[role=button] {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+button:focus,
+[role=button]:focus {
+  outline: 0;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  font-size: 1.3rem;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .header__logo-link {
+  color: white;
+  font-weight: bold;
+}
+.header .header__navigation {
+  top: 0;
+  right: 0;
+  width: 50%;
+  z-index: 999;
+  height: 100vh;
+  position: fixed;
+  text-transform: uppercase;
+  background-color: white;
+  transform: translateX(100%);
+  transition: transform 500ms ease-in-out;
+}
+.header .header__navigation .header__menu-icon-close {
+  margin: 2em;
+  width: 2.5em;
+  float: right;
+}
+.header .header__navigation .header__list {
+  padding: 0 1em;
+  margin-top: 8em;
+}
+.header .header__navigation .header__list .header__link {
+  display: block;
+  color: black;
+  padding: 0.75em 2em;
+}
+.header .header__navigation .header__list .header__link:hover {
+  border-radius: 30px;
+  background-color: rgb(235, 235, 235);
+}
+.header .header__menu-icon-open {
+  width: 2em;
+  display: block;
+  cursor: pointer;
+}
+
+.hero {
+  height: 90vh;
+  color: white;
+}
+.hero .hero__image {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-size: cover;
+  background-position: 20%;
+  background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
+}
+.hero .hero__content {
+  opacity: 0;
+  margin-top: -2em;
+  animation: heroDown 2000ms ease forwards;
+}
+.hero .hero__content .hero__heading {
+  margin-top: 3em;
+  font-weight: bold;
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+  margin-bottom: 0.5em;
+}
+.hero .hero__content .hero__paragraph {
+  font-size: 1.2rem;
+}
+.hero .hero__icon-svg {
+  width: 1em;
+  bottom: 2em;
+  position: absolute;
+  animation-delay: 10000ms;
+  animation: moveArrow 1000ms ease alternate-reverse infinite;
+}
+.hero .hero__icon-svg path {
+  fill: white;
+}
+
+.feature-card {
+  margin-block: 5em;
+}
+.feature-card .feature-card__image {
+  width: 100%;
+  height: 30em;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.feature-card .feature-card__title {
+  font-weight: bold;
+  margin-block: 1.7em;
+  font-size: 1.25rem;
+}
+.feature-card .feature-card__description {
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+
+.open-nav {
+  transform: translateX(0);
+}
+
+@media only screen and (min-width: 93.75em) {
+  .wrapper {
+    width: 100em;
+    margin: 0 auto;
+  }
+  .hero__image {
+    max-width: 50em;
+  }
+}
+@keyframes moveArrow {
+  from {
+    transform: translateY(-30px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes heroDown {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+:root {
+    $white: #fff;
+}
+
+// reset everything
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0 solid transparent;
+}
+
+// reset body line-height and setting body style
+body {
+    margin: 1.5em;
+    line-height: 1;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: 'Poppins', sans-serif;
+}
+
+// all media elements set to block and full width
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+// inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+// assign button hover state
+button,
+[role="button"] {
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+// reset anchor style
+a {
+    cursor: pointer;
+    color: inherit;
+    font-size: 1.3rem;
+    text-decoration: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+// reset list style
+ol,
+ul {
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header__logo-link {
+        color: white;
+        font-weight: bold;
+        // download better comment
+        // add fluid font size clamp
+    }
+
+    .header__navigation {
+        top: 0;
+        right: 0;
+        width: 50%;
+        z-index: 999;
+        height: 100vh;
+        position: fixed;
+        text-transform: uppercase;
+        background-color: white;
+        transform: translateX(100%);
+        transition: transform 500ms ease-in-out;
+
+        .header__menu-icon-close {
+            margin: 2em;
+            width: 2.5em;
+            float: right;
+        }
+
+        .header__list {
+            padding: 0 1em;
+            margin-top: 8em;
+
+            .header__link {
+                display: block;
+                color: black;
+                padding: 0.75em 2em;
+
+                &:hover {
+                    border-radius: 30px;
+                    background-color: rgb(235, 235, 235);
+                }
+            }
+        }
+    }
+
+    .header__menu-icon-open {
+        width: 2em;
+        display: block;
+        cursor: pointer;
+    }
+}
+
+.hero {
+    height: 90vh;
+    color: white;
+
+    .hero__image {
+        top: 0;
+        left: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        background-size: cover;
+        background-position: 20%;
+        background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
+    }
+
+    .hero__content {
+        opacity: 0;
+        margin-top: -2em;
+        animation: heroDown 2000ms ease forwards;
+
+        .hero__heading {
+            margin-top: 3em;
+            font-weight: bold;
+            font-size: 2.6rem;
+            line-height: 2.8rem;
+            margin-bottom: 0.5em;
+        }
+
+        .hero__paragraph {
+            font-size: 1.2rem;
+        }
+    }
+
+    .hero__icon-svg {
+        width: 1em;
+        bottom: 2em;
+        position: absolute;
+        animation-delay: 10000ms;
+        animation: moveArrow 1000ms ease alternate-reverse infinite;
+
+        path {
+            fill: white;
+        }
+    }
+}
+
+.feature-card {
+    margin-block: 5em;
+
+    .feature-card__image {
+        width: 100%;
+        height: 30em;
+        object-fit: cover;
+    }
+
+    .feature-card__title {
+        font-weight: bold;
+        margin-block: 1.7em;
+        font-size: 1.25rem;
+    }
+
+    .feature-card__description {
+        line-height: 1.5;
+        letter-spacing: 1px;
+    }
+}
+
+
+.open-nav {
+    transform: translateX(0);
+}
+
+
+
+// MEDIA QUERIES 
+
+// @media only screen and (min-width: 40.5em) {
+
+//     body {
+//         margin: 1.5em 5em;
+//     }
+
+// }
+
+// @media only screen and (min-width: 47em) {
+
+//     .header__menu-icon {
+//         display: none;
+//     }
+
+//     .header__navigation {
+//         display: block;
+
+//         .header__list {
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+
+//             .header__link {
+//                 gap: 0.2em;
+//                 display: flex;
+//                 color: white;
+//                 padding: 0.75em;
+//                 font-size: 1rem;
+//                 align-items: center;
+//                 flex-direction: column;
+//                 justify-content: center;
+
+//                 &::after {
+//                     height: 3px;
+//                     width: 0px;
+//                     content: "";
+//                     // margin-top: 0.5em;
+//                     border-radius: 30px;
+//                     background-color: white;
+//                     transition: width 500ms ease;
+//                 }
+
+//                 &:hover::after {
+//                     width: 50px;
+//                 }
+//             }
+//         }
+//     }
+
+//     .hero {
+//         display: grid;
+//         place-items: center;
+
+//         .hero__content {
+//             // width: 80%;
+//             // text-align: center;
+
+//             .hero__heading {
+//                 margin-top: 1em;
+//                 line-height: 4rem;
+//                 font-size: 3.7rem;
+//                 margin-bottom: 0.2em;
+//             }
+
+//             .hero__paragraph {
+//                 line-height: 1.3;
+//             }
+//         }
+//     }
+
+//     .feature__grid-container {
+
+//         .feature-card {
+//             gap: 3em;
+//             display: grid;
+//             place-items: center;
+//             grid-template-columns: repeat(2, auto);
+//         }
+
+//         .feature-left {
+//             grid-template-areas:
+//                 "left right";
+
+//             .feature-card__image {
+//                 grid-area: right;
+//             }
+
+//             .feature-card__content {
+//                 grid-area: left;
+//                 text-align: right;
+//             }
+//         }
+
+//         .feature-card__content {
+//             width: 20em;
+//         }
+//     }
+
+// }
+
+// @media only screen and (min-width: 80.75em) {
+
+//     .header__logo-link {
+//         color: black;
+//         font-weight: bold;
+
+//         span {
+//             color: #6ECFE1;
+//         }
+//     }
+
+//     .hero {
+//         place-items: unset;
+//         align-items: center;
+
+//         .hero__image {
+//             top: 0;
+//             right: 0;
+//             width: 50%;
+//             left: unset;
+//             height: 42em;
+//         }
+
+//         .hero__content {
+//             width: 35%;
+//             color: black;
+//             text-align: left;
+
+//             .hero__heading {
+//                 line-height: 1.3;
+//                 font-size: 2.4rem;
+//                 margin-bottom: 0.7em;
+
+//                 span {
+//                     color: #6ECFE1;
+//                 }
+//             }
+
+//             .hero__paragraph {
+//                 font-size: 0.9rem;
+//             }
+//         }
+
+//         .hero__icon-svg {
+//             path {
+//                 fill: black;
+//             }
+//         }
+//     }
+
+//     .feature__grid-container {
+
+//         .feature-card {
+//             gap: 3em;
+//             display: grid;
+//             place-items: center;
+//             grid-template-columns: repeat(2, auto);
+//         }
+
+//         .feature-left {
+//             grid-template-areas:
+//                 "left right";
+
+//             .feature-card__image {
+//                 grid-area: right;
+//             }
+
+//             .feature-card__content {
+//                 grid-area: left;
+//                 text-align: right;
+//             }
+//         }
+
+//         .feature-card__image {
+//             height: 30em;
+//         }
+
+//         .feature-card__content {
+//             width: 30em;
+//         }
+//     }
+
+// }
+
+@media only screen  and (min-width: 93.75em) {
+    .wrapper {
+        width: 100em;
+        margin: 0 auto;
+    }
+
+    .hero__image {
+        max-width: 50em;
+    }
+}
+
+@keyframes moveArrow {
+    from {
+        transform: translateY(-30px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroDown {
+    from {
+        transform: translateY(-200px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
