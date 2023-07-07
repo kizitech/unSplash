@@ -7,11 +7,13 @@
     <meta name="author" content="Ohani Kizito">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="shortcut icon" href="assets/kizitech-favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/images/kizitech-favicon.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/7c83eb763b.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="wrapper">
+        <div class="overlay"></div>
         <header class="header">
             <div class="header__logo">
                 <a href="#" class="header__logo-link">un<span>Splash</span></a>
@@ -32,8 +34,8 @@
                 </ul>
             </nav>
 
-            <div class="header__menu-icon" id="open-icon">
-                <img src="assets/icons/open-menu.svg" alt="Close menu icon" class="header__menu-icon-open">
+            <div class="header__menu-icon">
+                <img src="assets/icons/open-menu.svg" alt="Open menu icon" id="open-btn" class="header__menu-icon-open">
             </div>
         </header>
 
@@ -41,7 +43,8 @@
             <section class="hero">
                 <div class="hero__image"></div>
                 <div class="hero__content">
-                    <h1 class="hero__heading">Elevate Your Style to <span>New Heights</span> with Fashion<span>.</span></h1>
+                    <h1 class="hero__heading">Elevate Your Style to <span>New Heights</span> with Fashion<span>.</span>
+                    </h1>
                     <p class="hero__paragraph">Step into a world of style and elegance with our curated selection of
                         fashion models who embody the essence of beauty and sophistication.</p>
                 </div>
@@ -106,8 +109,8 @@
                 </div>
 
                 <div class="feature-card">
-                    <img src="assets/images/black-lady-posing-on-top-an-ocean.jpg" alt="Black lady posing on top an ocean"
-                        class="feature-card__image">
+                    <img src="assets/images/black-lady-posing-on-top-an-ocean.jpg"
+                        alt="Black lady posing on top an ocean" class="feature-card__image">
                     <div class="feature-card__content">
                         <h2 class="feature-card__title">Trendsetter's Delight</h2>
                         <p class="feature-card__description">Discover the latest fashion trends that will make you the
@@ -129,6 +132,53 @@
                             required>
                         <button type="submit" class="subscribe-form__button">Subscribe</button>
                     </form>
+                </div>
+            </section>
+            <section class="footer__container">
+                <nav class="footer__navigation">
+                    <ul class="footer__menu">
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Home</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">About</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Portfolio</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Contact</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Blog</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Shop</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Terms of Service</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Privacy Policy</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">FAQ</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Events</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Press</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Career</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Terms and Conditions</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Shipping</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Returns</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Lookbook</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Collaborations</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Terms of Use</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Cookie Policy</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Model Search</a></li>
+                        <li class="footer__menu-item"><a class="footer__menu-link" href="#">Subscribe</a></li>
+                    </ul>
+                </nav>
+                <div class="footer__social">
+                    <a class="footer__social-link footer__social-link--facebook" href="#"><i
+                            class="fab fa-facebook"></i></a>
+                    <a class="footer__social-link footer__social-link--twitter" href="#"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="footer__social-link footer__social-link--instagram" href="#"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="footer__social-link footer__social-link--pinterest" href="#"><i
+                            class="fab fa-pinterest"></i></a>
+                    <a class="footer__social-link footer__social-link--linkedin" href="#"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a class="footer__social-link footer__social-link--youtube" href="#"><i
+                            class="fab fa-youtube"></i></a>
+                    <a class="footer__social-link footer__social-link--tiktok" href="#"><i
+                            class="fab fa-tiktok"></i></a>
+                </div>
+                <div class="footer__info">
+                    &copy; 2023 unSplash Fashion built by <a href="https://www.linkedin.com/in/ohanikizito/">Ohani
+                        Kizito</a>. All rights reserved.
                 </div>
             </section>
         </footer>

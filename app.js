@@ -1,16 +1,21 @@
 var bodyWrapper = document.querySelector("body")
-var openBtn = document.querySelector("#open-icon")
+var overlay = document.querySelector(".overlay")
 var navSection = document.querySelector(".header__navigation")
+var openBtn = document.querySelector(".header__menu-icon-open")
 var closeBtn = document.querySelector(".header__menu-icon-close")
 
 
-
-
-openBtn.addEventListner("click", function () {
-    bodyWrapper.classList.add("huh")
-    navSection.classList.add("open-nav")
+openBtn.addEventListener('click', function() {
+    overlay.classList.add("active");
+    navSection.classList.add("open-nav");
 });
 
-closeBtn.addEventListner("click", function () {
-    navSection.classList.remove("open-nav")
+closeBtn.addEventListener('click', function() {
+    overlay.classList.remove("active");
+    navSection.classList.remove("open-nav");
 });
+
+overlay.addEventListener("click", function() {
+    overlay.classList.remove("active");
+    navSection.classList.remove("open-nav");
+})
