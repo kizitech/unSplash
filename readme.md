@@ -3,11 +3,12 @@
 This is a responsive website template for a fashion model website called unSplash. It includes HTML, SCSS, and JavaScript code to create a modern and visually appealing layout.
 
 ## Screenshots
-![Large screen](../assets/screenshots/large-screen.JPG)
-![Medium screen](../assets/screenshots/medium-screen.JPG)
-![Small screen](../assets/screenshots/small-screen.JPG)
-![Large footer](../assets/screenshots/large-footer.JPG)
-![Small footer](../assets/screenshots/small-footer.JPG)
+![Large screen](assets/screenshots/large-screen.JPG)
+![Medium screen](assets/screenshots/medium-screen.JPG)
+![Small screen](assets/screenshots/small-screen.JPG)
+![Body of site](assets/screenshots/body.JPG)
+![Large footer](assets/screenshots/large-footer.JPG)
+![Small footer](assets/screenshots/small-footer.JPG)
 
 ## Link 
 
