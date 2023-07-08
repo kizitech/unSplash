@@ -12,7 +12,7 @@ This is a responsive website template for a fashion model website called unSplas
 
 ## Link 
 
-Live link: (here)[https://kizitech.github.io/unSplash/]
+Live link: [here](https://kizitech.github.io/unSplash/)
 
 ## Features
 
