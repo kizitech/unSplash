@@ -9,6 +9,10 @@ This is a responsive website template for a fashion model website called unSplas
 ![Large footer](../assets/screenshots/large-footer.JPG)
 ![Small footer](../assets/screenshots/small-footer.JPG)
 
+## Link 
+
+Live link: (here)[https://kizitech.github.io/unSplash/]
+
 ## Features
 
 - Responsive design
