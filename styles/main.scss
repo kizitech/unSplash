@@ -103,6 +103,10 @@ ul {
         color: $white;
         font-weight: bold;
         font-size: calc(2rem + ((1vw - 0.93rem) * 1));
+
+        span {
+            color: $blue;
+        }
     }
 
     .header__navigation {
@@ -118,7 +122,7 @@ ul {
         transition: transform 500ms ease-in-out;
 
         .header__menu-icon-close {
-            margin: 1.5em;
+            margin: 7%;
             width: 2.5em;
             float: right;
             cursor: pointer;
@@ -175,6 +179,10 @@ ul {
             font-size: 2.6rem;
             margin-bottom: 1em;
             line-height: 2.8rem;
+
+            span {
+                color: $blue;
+            }
         }
 
         .hero__paragraph {
@@ -220,7 +228,7 @@ ul {
 .footer {
     left: 0;
     width: 100%;
-    padding: 2.5em 0;
+    padding: 2.5em 0 0;
     position: absolute;
     background-color: #fafafa;
     font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
@@ -317,11 +325,14 @@ ul {
     }
 
     &__footer {
+        padding: 0 2.5em;
         text-align: center;
-        margin-bottom: 2rem;
+        margin-bottom: 1em;
 
         &-hr {
+            height: 1px;
             margin: 2rem 0;
+            background-color: #777;
         }
 
         &-a {
@@ -338,25 +349,20 @@ ul {
 
     @media (max-width: 767px) {
         &__content {
+            gap: 3em;
             display: flex;
             flex-direction: column;
-            font-size: 14px;
         }
 
-        position: unset;
-    }
+        & p {
+            margin-bottom: 2.5em;
+        }
 
-    @media (min-width: 768px) and (max-width: 1024px) {
-
-        &__content,
-        & {
-            font-size: 14px;
+        .subscribe-content {
+            padding-inline: 1em;
         }
     }
 
-    @media (orientation: landscape) and (max-height: 500px) {
-        position: unset;
-    }
 }
 
 .open-nav {
@@ -374,38 +380,45 @@ ul {
     body {
         margin: 1.5em 5em;
     }
-
 }
 
-@media only screen and (min-width: 47em) {
+@media only screen and (min-width: 50em) {
 
     .header__menu-icon {
         display: none;
     }
 
     .header__navigation {
+        display: flex;
         display: block;
+        align-items: center;
+        height: 2em !important;
+        width: unset !important;
+        background: none !important;
+        position: absolute !important;
+        transform: translateX(0) !important;
 
         .header__list {
             display: flex;
             align-items: center;
-            justify-content: center;
+            margin-top: 1em !important;
+            justify-content: space-evenly;
 
             .header__link {
                 gap: 0.2em;
-                display: flex;
-                color: $white !important;
-                padding: 0.75em;
                 font-size: 1rem;
                 align-items: center;
                 flex-direction: column;
                 justify-content: center;
+                color: $white !important;
+                display: flex !important;
+                background: none !important;
+                padding: 0.75em 1em !important;
 
                 &::after {
                     height: 3px;
                     width: 0px;
                     content: "";
-                    // margin-top: 0.5em;
                     border-radius: 30px;
                     background-color: $white !important;
                     transition: width 500ms ease;
@@ -431,10 +444,6 @@ ul {
                 line-height: 4rem;
                 font-size: 3.7rem;
                 margin-bottom: 0.2em;
-
-                span {
-                    color: $blue;
-                }
             }
 
             .hero__paragraph {
@@ -475,12 +484,17 @@ ul {
 
 @media only screen and (min-width: 80.75em) {
 
-    .header__logo-link {
-        color: $black !important;
-        font-weight: bold;
+    .header {
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4em;
+        position: absolute;
+        padding-inline: 3%;
 
-        span {
-            color: $blue;
+        .header__logo-link {
+            font-weight: bold;
+            color: $black !important;
         }
     }
 
@@ -493,13 +507,15 @@ ul {
             right: 0;
             width: 50%;
             left: unset;
-            height: 42em;
+            height: 100vh;
+            background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
         }
 
         .hero__content {
             width: 35%;
             color: $black;
             text-align: left;
+            margin-top: 4em !important;
 
             .hero__heading {
                 line-height: 1.3;
@@ -559,12 +575,28 @@ ul {
         margin: 0 auto;
     }
 
-    .hero {
-        position: relative;
+    .header {
+        padding-inline: 10%;
 
-        .hero__heading {
-            font-size: 5rem !important;
+        .header__list {
+            display: flex;
+            align-items: center;
+            padding: 0 3em !important;
+            justify-content: space-evenly;
+
+            .header__link {
+                color: $black !important;
+
+                &::after {
+                    background-color: $black !important;
+                }
+            }
         }
+    }
+
+    .hero {
+        margin-top: 5em;
+        position: relative;
 
         .hero__paragraph {
             font-size: 1.2rem !important;
