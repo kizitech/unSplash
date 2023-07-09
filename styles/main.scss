@@ -348,7 +348,7 @@ ul {
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 750px) {
         &__content {
             gap: 3em;
             display: flex;
@@ -509,7 +509,6 @@ ul {
             width: 50%;
             left: unset;
             height: 100vh;
-            background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
         }
 
         .hero__content {
@@ -598,6 +597,10 @@ ul {
     .hero {
         margin-top: 5em;
         position: relative;
+
+        .hero__image {
+            background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
+        }
 
         .hero__paragraph {
             font-size: 1.2rem !important;

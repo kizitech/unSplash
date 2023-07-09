@@ -288,7 +288,7 @@ ul {
 .footer__footer-a:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.829);
 }
-@media (max-width: 767px) {
+@media (max-width: 750px) {
   .footer__content {
     gap: 3em;
     display: flex;
@@ -413,7 +413,6 @@ ul {
     width: 50%;
     left: unset;
     height: 100vh;
-    background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
   }
   .hero .hero__content {
     width: 35%;
@@ -478,6 +477,9 @@ ul {
   .hero {
     margin-top: 5em;
     position: relative;
+  }
+  .hero .hero__image {
+    background-image: url("/assets/images/lady-wearing-a-yellow-jumpsuit.jpg");
   }
   .hero .hero__paragraph {
     font-size: 1.2rem !important;
